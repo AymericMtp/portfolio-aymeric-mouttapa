@@ -1,0 +1,818 @@
+body {
+    margin: 0;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    background-color: #004AAD;
+    font-family: Questrial;
+    color: white; /* Padding ajouté à gauche et à droite du header */
+    position: fixed;
+	height: 50px;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+#logo-am {
+    height: 53px;
+    margin-right: 20px; /* Espacement entre le logo et les liens */
+}
+
+#logo-am:hover{
+    transform: scale(1.05); /* Agrandit légèrement le logo au survol */
+}
+
+nav {
+    display: flex;
+    flex-grow: 1; /* Prend l'espace disponible */
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-right: 20px; /* Espacement entre les liens */
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease; /* Transition douce pour les changements de style */
+    padding: 10px 15px; /* Ajoutez du padding pour augmenter la zone cliquable */
+    border-radius: 5px; /* Coins arrondis pour le look */
+}
+
+nav ul li a:hover,
+nav ul li a:focus { /* Effets lors du survol ou de la mise au point */
+    color: #004AAD; /* Changer la couleur du texte lors du survol */
+    background-color: #C7FFFE; /* Couleur de fond lors du survol */
+    font-size: 20px; /* Agrandissement de l'élément */
+}
+
+
+
+
+#cv-translate-container {
+    display: flex;
+    align-items: center;
+    margin-left: auto; /* Pousse le contenu vers la droite */
+    padding-right: 30px; /* Padding ajouté à droite du conteneur */
+}
+
+#cv-translate-container:hover img {
+    transform: scale(1.1); /* Agrandit légèrement le logo au survol */
+}
+
+#cv-logo {
+    height: 30px;
+    margin-right: 5px; /* Espacement entre le logo CV et le texte */
+}
+
+
+
+main {
+    display: flex;
+    height: calc(100vh - 50px); /* Hauteur totale moins la hauteur du header */
+}
+
+.left-section {
+    background-color: #333; /* Gris foncé */
+    width: 30%;
+    height: 100%;
+}
+
+.right-section {
+    background-color: #eee; /* Gris clair */
+    width: 70%;
+    height: 100%;
+    position: relative;
+}
+
+
+.blue-stripe {
+	position: absolute;
+	z-index: 0;
+    background-color: #004AAD;
+    width: 100px;
+    height: 350px;
+    left: -170px;
+    top: 275px;
+	border-radius: 5px;
+}
+
+.title-bar {
+	position: relative;
+	z-index: 1;
+    background-color: white;
+    padding: 20px;
+    top: 300px; /* Ajusté pour centrer verticalement */
+    left: -225px; /* Commence à la frontière des sections */
+    width: 600px; /* Largeur ajustée */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;	/* Ajoute une ombre pour le contraste */
+}
+
+
+
+.title-bar h1 {
+    color: #004AAD;
+	text-align: center;
+    font-family: DIN;
+    font-weight: bold;
+    font-size: 4.5em; /* Augmentez la taille de la police ici */
+}
+
+.title-bar p {
+	text-align: center;
+    font-size: 1.5em; /* Augmentez également la taille de la police du sous-titre si nécessaire */
+    font-family: Questrial;
+}
+
+.home-image {
+    display: block;
+    margin-top: 180px;
+	margin-left: 650px;/* Centrage horizontal */
+    max-width: 100%; /* Ajustez selon la taille souhaitée */
+    height: 80%; /* Maintient l'aspect ratio de l'image */
+    position: absolute;
+    transform: translate(-50%, -50%);
+	width: 1200px;
+	border-radius: 5px;/* Centrage précis */
+}
+
+.start-button {
+    background-color: #004AAD;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    bottom: 20px;
+    left: -500px;
+    transform: translateX(-50%);
+	transition: transform 0.3s ease;
+	border-radius: 20px;
+}
+
+.start-button:hover {
+    transform: scale(1.1); /* Augmente la taille du bouton de 10% lors du survol */
+}
+
+.arrow {
+    color: white; /* Gris */
+}
+
+
+
+
+
+
+#about {
+    background-color: #e6e6e6;
+    padding: 20px;
+	padding-top: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;/* Alignez le contenu à gauche */
+}
+
+.about-left {
+    background-color: #004AAD;
+    color: white;
+    margin-left: -20px;
+    padding: 20px;
+    width: 550px;
+    border-radius: 0px 20px 20px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-header {
+    text-align: center; /* Assure que le texte est centré */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+	height: 200px;
+}
+
+.about-left h2 {
+    font-size: 70px;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+}
+
+.about-logo-container {
+    /* Ajustez la marge ici pour déplacer uniquement l'image */
+    margin-top: 7px;
+	margin-left: 40px;/* Ajustez cette valeur pour obtenir l'alignement souhaité */
+}
+
+.about-logo {
+    height: 100px;
+    width: auto;
+}
+
+.about-content {
+    display: flex;
+    width: 100%; /* Prend la largeur de la section */
+}
+
+.profile-pic {
+    width: 400px; /* Taille de la photo de profil, ajustez selon vos besoins */
+    margin-left: 50px;
+	margin-top: 20px; /* Espace au-dessus de la photo */
+    margin-right: 20px; /* Espace à droite de la photo */
+	border: 5px solid #333;
+	border-radius: 20px;
+}
+
+.about-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* ou 'center' selon le besoin */
+}
+
+.profile-and-tabs {
+    display: flex;
+    align-items: flex-start; /* Aligner les éléments verticalement au début */
+}
+
+.tabs {
+    background-color: #333; /* Gris clair pour le fond des boutons */
+    padding: 10px; /* Ajoute un peu d'espace autour des boutons à l'intérieur du conteneur */
+    display: flex; /* Assure que les boutons sont alignés horizontalement */
+    flex-direction: row; /* Alignement horizontal des boutons */
+    margin-left: 370px;
+    margin-top: -150px;
+    border-radius: 20px; /* Ajoute des coins arrondis au bloc, si vous le souhaitez */
+}
+
+.tab-button {
+    padding: 10px; /* Espace intérieur autour du texte dans les boutons */
+	margin-left: 60px;
+    margin-right: 60px; /* Espace entre les boutons */
+    cursor: pointer;
+    background-color: white; /* Rend le fond des boutons transparent ou utilisez une couleur spécifique */
+    border: none; /* Supprime la bordure des boutons */
+    font-size: 25px; /* Ajustez la taille de la police des boutons si nécessaire */
+    border-radius: 20px; /* Coins arrondis pour les boutons, si vous le souhaitez */
+}
+
+.tab-content {
+	height: 500px;
+	width: 700px;
+	font-size: 20px;
+	background-color: #BFBFBF;
+	padding-top: 10px;
+	padding-left: 30px;
+	padding-right: 30px;
+    margin-left: 850px;
+	margin-top: -560px;
+	border-radius: 15px;
+}
+
+
+/* Styles pour les labels des boutons radio lorsqu'ils sont sélectionnés */
+#tab1:checked ~ label[for="tab1"],
+#tab2:checked ~ label[for="tab2"],
+#tab3:checked ~ label[for="tab3"] {
+    background-color: #ccc; /* Couleur de fond pour l'onglet actif */
+    font-weight: bold; /* Texte en gras pour l'onglet actif */
+}
+
+
+#competences {
+    display: flex;
+    padding: 20px;
+	padding-top: 60px;
+    background-color: #eee;
+    align-items: flex-start;
+	flex-wrap: wrap;
+}
+
+/* Section gauche : Compétences */
+.competences-left {
+    width: 40%;
+	padding-left: 3%;
+    padding-right: 7%;
+    display: flex;
+    flex-direction: column;
+}
+
+.competences-titre {
+    background-color: #333333; /* Fond gris foncé */
+    color: white;
+    padding: 10px;
+    margin: 0;
+	text-align: center;
+	border-radius: 20px;
+}
+
+.competences-texte {
+    background-color: #BFBFBF; /* Fond gris clair */
+	height: 550px;
+    padding: 20px;
+    margin-top: 20px;
+	border-radius: 15px;
+}
+
+/* Texte de compétences individuelles */
+.competences-texte h4,
+.competences-texte p {
+    margin: 10px 0;
+    font-size: 1.5em; 
+}
+
+/* Section droite : Certifications */
+.competences-right {
+    width: 45%;
+    padding-right: 3%;
+    display: flex;
+    flex-direction: column;
+}
+
+.certifications-titre {
+    background-color: #e6e6e6; /* Fond gris clair */
+    color: #004AAD; /* Texte en bleu */
+    padding: 10px;
+    margin: 0;
+    text-align: center;
+	border-radius: 20px;
+}
+
+/* Carrousel des certifications */
+.certifications {
+	text-align: center;
+	width: 500px;
+	height: 550px;
+    position: relative;
+	padding: 20px;
+    margin-left: 150px;
+	padding-bottom: 50px;
+}
+
+.certification {
+    display: none;
+}
+
+.certification:first-child {
+    display: block;
+}
+
+.description {
+    text-align: center;
+    padding: 10px;
+    background-color: #ddd; /* Fond pour la description */
+    margin-top: 10px; /* Espacement au-dessus de la description */
+}
+
+/* ... Styles pour les boutons prev et next ... */
+
+
+
+button.prev,
+button.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0,0,0,0.5);
+    color: #004AAD;
+    border: none;
+    padding: 20px;
+    font-size: 24px;
+}
+
+button.prev:hover,
+button.next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+button.prev {
+    left: -50px;
+	margin-top: -50px;
+}
+
+button.next {
+    right: -50px;
+	margin-top: -50px;
+}
+
+
+.competences-grand-titre {
+    background-color: #004AAD; /* Fond gris foncé */
+    color: white;
+	margin-top: -65px;
+    margin-left: auto; /* Pour coller à la gauche de la page si nécessaire */
+	margin-right: -20px;
+    padding: 20px;
+    width: 600px; /* Largeur spécifique pour correspondre à la section 'À Propos' */
+	height: 200px;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+    text-align: center;
+    box-sizing: border-box;
+    float: right; /* Aligner à droite sans espace */
+	border-radius: 20px 0px 0px 20px;
+}
+
+.competences-header {
+    text-align: center; /* Assure que le texte est centré */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+	height: 200px;
+}
+
+.competences-grand-titre h2 {
+    font-size: 70px; /* Taille de la police à votre convenance */
+    font-weight: bold; /* Rend le texte en gras si nécessaire */
+    margin: 0; /* Aucune marge autour du h2 pour coller au bord */
+    padding-left: 30px; 
+	padding-top: -100px; /* Padding à gauche pour un peu d'espace intérieur */
+}
+
+.competences-logo {
+    height: 100px;
+    margin-left: 20px;
+}
+
+
+
+#parcours {
+    background-color: #e6e6e6;
+    padding: 20px;
+    padding-top: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.parcours-flex-container {
+    display: flex;
+    width: 100%; /* Prend toute la largeur disponible */
+}
+
+.parcours-container {
+    width: 40%; /* Ajustez selon vos préférences */
+    /* Garder le reste de la mise en forme de parcours-left et timeline-container */
+}
+
+.parcours-content {
+    width: 500px; /* Ajustez selon vos préférences pour que cela soit équilibré avec parcours-container */
+    /* Garder le reste de la mise en forme pour .experiences */
+}
+
+
+.parcours-left {
+    background-color: #004AAD;
+    color: white;
+    margin-left: -20px; /* Si nécessaire pour aligner comme dans 'À Propos' */
+    padding: 20px;
+    width: 550px; /* Assurez-vous que la largeur est appropriée */
+    text-align: center;
+    border-radius: 0px 20px 20px 0px;	
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;/* Centrer le titre si nécessaire */
+}
+
+.parcours-header {
+    text-align: center; /* Assure que le texte est centré */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+	height: 200px;
+}
+
+
+.parcours-left h2 {
+    font-size: 70px;
+    font-weight: bold;
+    padding-left: 50px; /* Ajustez le padding pour aligner le texte comme vous le souhaitez */
+    color: white; /* Ajoutez un espace sous le titre si nécessaire */
+}
+
+.parcours-logo-container {
+    /* Ajustez la marge ici pour déplacer uniquement l'image */
+    margin-top: 20px;
+	margin-left: 40px;
+	margin-right: 20px;/* Ajustez cette valeur pour obtenir l'alignement souhaité */
+}
+
+.parcours-logo {
+    height: 100px;
+    width: auto;
+}
+
+.timeline-container {
+    position: relative;
+    margin-top: 20px;
+	width: 500px;
+	margin-top: 110px;
+	margin-left: 150px;
+}
+
+.timeline-block {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.timeline-dot {
+    position: absolute;
+    left: -30px;
+    height: 20px;
+    width: 20px;
+    background-color: #fff;
+    border: 3px solid #004AAD;
+    border-radius: 50%;
+    top: 10px;
+	margin-top: 50px;
+}
+
+.timeline-content {
+    margin-left: 50px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 3px;
+}
+
+.timeline-container::before {
+    content: '';
+    position: absolute;
+    left: 20px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: #004AAD;
+}
+
+
+.parcours-content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 2;
+}
+
+.experiences {
+    flex: 1;
+    background-color: white;
+    padding: 20px;
+	margin-left: 100px;
+	margin-right: 100px;
+    margin-bottom: 50px;
+	margin-top: 75px;
+	width: 900px;
+	border-radius: 15px;
+}
+
+.experiences h3 {
+	text-align: center;
+	font-size: 2em;
+	color: #004AAD;
+}
+
+.experiences ul {
+	padding-right: 100px;
+	font-size: 1.5em
+}
+
+.countries {
+    flex: 1;
+    background-color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-evenly;
+	margin-top: 70px;
+}
+
+.flag {
+    width: 100px;
+    margin: 0 10px;
+}
+
+#projects {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    padding-top: 50px;
+    background-color: #eee;
+    align-items: flex-start;
+}
+
+.projets-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.projets-universitaires,
+.projets-professionnels {
+    flex: 1;
+    margin: 10px;
+}
+
+.projets-universitaires h3{
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+	border-radius: 20px;
+}
+
+.projets-professionnels h3 {
+    background-color: #e6e6e6;
+    color: #004AAD;
+    padding: 10px;
+    text-align: center;
+	border-radius: 20px;
+}
+
+
+
+.projet-universitaire{
+    background-color: #BFBFBF;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+	height: 350px;
+	border-radius: 10px;
+}
+
+.projet-professionnel {
+    background-color: #BFBFBF;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+	height: 425px;
+	border-radius: 10px;
+}
+
+.projet-universitaire img{
+    width: 200px; /* Adjust size as needed */
+    margin: 20px;
+	margin-right: 0px;
+}
+
+.projet-professionnel img {
+    width: 200px; 
+    margin: 20px;
+	margin-right: 0px;
+}
+
+.projet-option:hover img {
+    transform: scale(1.1); /* Agrandit légèrement le logo au survol */
+}
+
+.projet-universitaire ul p,
+.projet-professionnel ul p {
+    flex: 1;	
+	padding-right:20px;
+}
+
+.projet-universitaire ul h5,
+.projet-professionnel ul h5 {
+	margin-top: 5px;
+	margin-bottom:-30px;
+	font-size: 20px;
+}
+
+/* Grand titre sous les projets */
+.projets-grand-titre {
+    background-color: #004AAD; /* Fond gris foncé */
+    color: white;
+	margin-top: -270px;
+    margin-left: auto; /* Pour coller à la gauche de la page si nécessaire */
+	margin-right: -20px;
+    padding: 20px;
+    width: 600px; /* Largeur spécifique pour correspondre à la section 'À Propos' */
+	height: 200px;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+    text-align: center;
+    box-sizing: border-box;
+    float: right;
+	border-radius: 20px 0px 0px 20px;
+	/* Aligner à droite sans espace */
+}
+.projet-header {
+    text-align: center; /* Assure que le texte est centré */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+	height: 200px;
+}
+
+.projets-grand-titre h2 {
+    font-size: 70px; /* Taille de la police à votre convenance */
+    font-weight: bold; /* Rend le texte en gras si nécessaire */
+    margin: 0; /* Aucune marge autour du h2 pour coller au bord */
+    padding-left: 50px; /* Padding à gauche pour un peu d'espace intérieur */
+}
+
+.projet-logo-container {
+    /* Ajustez la marge ici pour déplacer uniquement l'image */
+    margin-top: 7px;
+	margin-left: 40px;/* Ajustez cette valeur pour obtenir l'alignement souhaité */
+}
+
+.projets-logo {
+    height: 100px;
+	width: auto;
+    margin-left: 40px;
+}
+/* Styles supplémentaires pour les projets eux-mêmes (images, descriptions, etc.) */
+/* ... */
+
+#contact {
+    background-color: #e6e6e6;
+    padding: 50px; /* Centre le titre et les logos */
+}
+
+
+.contact-title {
+    background-color: #004AAD;
+    color: white;
+    width: 700px;
+	height: 200px;/* Ajuster en fonction de la largeur de votre conteneur */
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    box-sizing: border-box;
+	margin-left: 550px;
+	margin-bottom: 100px;
+    /* Pas besoin de margin-left ici si on centre le conteneur */
+}
+
+.contact-header {
+    display: flex;
+    align-items: center;
+}
+
+.contact-title h2 {
+    font-size: 70px;
+    font-weight: bold;
+    margin: 0; /* Aucune marge pour aligner avec le logo */
+}
+
+.contact-logo-container {
+    margin-left: 70px; /* Ajustez en fonction de l'espacement souhaité entre le texte et le logo */
+}
+
+.contact-logo {
+    height: 100px; /* Ajustez en fonction de la taille souhaitée */
+    width: auto;/* Conserver les proportions */
+}
+
+.contact-options {
+    display: flex;
+    justify-content: center;
+    gap: 250px;
+}
+
+.contact-option {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+}
+
+.contact-option img {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 10px;
+    border: 5px solid #333; 	
+	border-radius: 30px;
+
+}
+
+.contact-option span {
+    display: block;
+    font-size: 14px;
+}
+
+@media (max-width: 768px) {
+    .contact-options {
+        flex-direction: column;
+    }
+}
+
+.contact-option:hover img {
+    transform: scale(1.1); /* Agrandit légèrement le logo au survol */
+}

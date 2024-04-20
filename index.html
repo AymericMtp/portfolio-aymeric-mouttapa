@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Aymeric Mouttapa - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+		<a href="#home">
+			<img src="Image/logo-am.avif" alt="Logo AM" id="logo-am">
+		</a>
+        <nav>
+            <ul>
+                <li><a href="#home">Accueil</a></li>
+                <li><a href="#about">À Propos</a></li>
+                <li><a href="#competences">Compétences</a></li>
+                <li><a href="#parcours">Parcours</a></li>
+                <li><a href="#projects">Projets</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div id="cv-translate-container">
+			<a href="Image/CV.pdf" target="_blank" class="cv-translate-container">
+				<img src="Image/cv-logo.png" alt="Logo CV" id="cv-logo">
+			</a>
+            <span>CV</span>
+        </div>
+    </header>
+    <main id="home">
+        <div class="left-section">
+            <!-- Contenu de la section gauche (30%) -->
+        </div>
+        <div class="right-section">
+            <span class="blue-stripe"></span>
+            <div class="title-bar">
+                <h1>Aymeric Mouttapa</h1>
+                <p>Portfolio - Science des Données</p>
+            </div>
+            <img src="Image/image.jpg" alt="Image Accueil" class="home-image">
+			<a href="#about" class="start-button-link">
+				<button class="start-button">Commencer <span class="arrow">→</span></button>
+			</a>
+        </div>
+    </main>
+    <section id="about">
+        <div class="about-left">
+			<div class="about-header">
+				<h2>À Propos </h2> 
+				<div class= "about-logo-container">
+					<img src="Image/aboutlogo.jpg" alt="Logo À Propos" class="about-logo">
+				</div>
+			</div>
+		</div>
+        <div class="about-right">
+			<div class="profile-and-tabs">
+				<img src="Image/profile.jpg" alt="Photo de profil" class="profile-pic">
+				<div class="tabs">
+					<input type="radio" id="tab1" name="tab-control" checked hidden />
+					<label for="tab1" class="tab-button">Présentation</label>
+					<input type="radio" id="tab2" name="tab-control" hidden />
+					<label for="tab2" class="tab-button">Soft Skills</label>
+					<input type="radio" id="tab3" name="tab-control" hidden />
+					<label for="tab3" class="tab-button">Passions</label>
+				</div>
+			</div>
+			<div class="tab-content-area">
+				<div class="tab-content" id="content1">
+					<p>Préparant un Bachelor Universitaire de Technologie de Science des Données en alternance, je m’épanouis actuellement dans ce domaine en expansion. Curieux et ambitieux, je cherche à maitriser ce domaine et continuer à m’instruire sur les différents outils et enrichir mes connaissances. <br> <br>
+						Etant apprenti Développeur BI & Data Scientist chez ADP France, je développe actuellement mes connaissances Data Vizualisation et Reporting avec PowerBI.<br> <br>
+						Le mélange du théorique et du pratique me permet d’acquérir de l’expérience et de continuer à apprendre de diverses notions.<br> <br>
+						Ayant vécu à l’étranger pendant une bonne fraction de ma vie, j’aimerai continuer à m’ouvrir l’esprit en effectuant mon master hors de la France</p>
+				</div>
+				<div class="tab-content" id="content2">
+					<p>Adaptabilité Culturelle : Expériences de vie prolongées à Los Angeles, Abu Dhabi et Berlin, développant une capacité exceptionnelle à naviguer et à s'adapter à divers environnements culturels. <br> <br>
+						Sérieux et Rigoureux : Engagement profond dans chaque projet, que ce soit académique ou professionnel, avec une attention méticuleuse aux détails et un respect strict des délais. <br> <br>
+						Curiosité Intellectuelle : Passion pour l'apprentissage continu, notamment dans les domaines de l'analyse de données et des technologies émergentes, permettant une compréhension rapide et une application de nouvelles compétences et concepts. <br> <br>
+						Compétences Multilingues : Maîtrise du français, de l'anglais, et compétences en allemand et en espagnol, facilitant la communication et la collaboration avec des équipes internationales. <br> <br>
+						Créativité et Résolution de Problèmes : Aptitude à penser de manière innovante pour résoudre des problèmes complexes, combinant créativité analytique et approche logique pour des solutions efficaces et pratiques.</p>
+				</div>
+				<div class="tab-content" id="content3">
+					<p>Voyages : Expérience enrichissante de vie et de travail dans plusieurs pays, reflétant un intérêt profond pour l'exploration de nouvelles cultures et la compréhension des diversités mondiales. <br> <br>
+						Musculation : Discipline sportive pratiquée régulièrement, illustrant un engagement envers le bien-être personnel et la résilience physique. <br> <br>
+						Jeux Vidéo : Intérêt pour le gaming, non seulement comme loisir mais aussi pour son aspect compétitif et stratégique, favorisant les réflexes et la prise de décision rapide. <br> <br>
+						Musique et Mode : Attractions culturelles qui montrent un sens de la créativité et de l'expression personnelle, soulignant une appréciation pour l'art sous diverses formes.</p>
+				</div>
+			</div>
+		</div>
+    </section>
+	<script>
+	document.addEventListener('DOMContentLoaded', () => {
+		const tabs = document.querySelectorAll('.tab-button');
+		const contents = document.querySelectorAll('.tab-content');
+
+		// Masquer tous les contenus sauf le premier
+		contents.forEach((content, index) => {
+			if (index !== 0) {
+				content.style.display = 'none';
+			}
+		});
+
+		tabs.forEach((tab, index) => {
+			tab.addEventListener('click', () => {
+				contents.forEach(content => {
+					content.style.display = 'none';
+				});
+				contents[index].style.display = 'block';
+			});
+		});
+	});
+	</script>
+    <section id="competences">
+        <div class="competences-left">
+            <div class="competences-titre">
+                <h3>Compétences</h3>
+            </div>
+            <div class="competences-texte">
+                <h4>Programmation :</h4>
+                <p>Python, SQL, HTML/CSS.</p> <br> <br>
+                <h4>Statistiques et Analyse de Données :</h4>
+                <p>R, Statistiques Descriptives et Inférentielles, Probabilités.</p> <br> <br>
+                <h4>Business Intelligence et Rapports :</h4>
+                <p>Power BI, Excel, Tableau.</p> <br> <br>
+				<h4>Gestion de Projet et Méthodologies :</h4>
+                <p>Gestion de Projets, Connaissances en Economie et en Droit. </p> <br> <br>
+            </div>
+        </div>
+        <div class="competences-right">
+            <div class="certifications-titre">
+                <h3>Certifications</h3>
+            </div>
+            <div class="certifications">
+                <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+                <div class="certification">
+                    <img src="Image/IELTS_Results.png" alt="Certification 1" style="width:100%">
+                    <div class="description">IELTS Results</div>
+                </div>
+                <div class="certification" style="display:none;">
+                    <img src="Image/àvenir.png" alt="Certification 2" style="width:100%">
+                    <div class="description">A Venir...</div>
+                </div>
+                <button class="next" onclick="changeSlide(1)">&#10095;</button>
+            </div>
+		</div>
+        <div class="competences-grand-titre">
+			<div class="competences-header">
+				<h2>Compétences</h2>
+				<div class= "competences-logo-container">
+					 <img src="Image/competenceslogo.png" alt="Logo Compétences" class="competences-logo">
+				</div>
+			</div>
+        </div>
+    </section>
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function changeSlide(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("certification");
+            if (n > slides.length) { slideIndex = 1; }
+            if (n < 1) { slideIndex = slides.length; }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slides[slideIndex - 1].style.display = "block";
+        }
+    </script>
+	<section id="parcours">
+		<div class="parcours-flex-container">
+			<div class="parcours-container">
+				<div class="parcours-left">
+					<div class="parcours-header">
+						<h2>Parcours</h2>
+						<div class="parcours-logo-container">
+							<img src="Image/parcourslogo.jpg" alt="Logo Parcours" class="parcours-logo">
+						</div>
+					</div>
+				</div>
+				<!-- Timeline Container -->
+				<div class="timeline-container">
+					<div class="timeline-block">
+						<div class="timeline-dot"></div>
+						<div class="timeline-content">
+							<h3>BUT Science des Données</h3>
+							<span>2022 - 2025</span>
+							<p>Université Paris Cité - IUT Paris Rives de Seine - Paris 16, France</p>
+						</div>
+					</div>
+					<div class="timeline-block">
+						<div class="timeline-dot"></div>
+						<div class="timeline-content">
+							<h3>Baccalauréat Générale - Mathématiques & SES</h3>
+							<span>2019 - 2022</span>
+							<p>Lycée d'Arsonval - Saint-Maur-des-Fossés, France</p>
+						</div>
+					</div>
+				</div>
+				<div class="countries">
+					<h3>Pays vécus</h3>
+					<img src="Image/flag1.png" alt="Drapeau Pays 1" class="flag">
+					<img src="Image/flag2.png" alt="Drapeau Pays 2" class="flag">
+					<img src="Image/flag3.png" alt="Drapeau Pays 3" class="flag">
+					<img src="Image/flag4.png" alt="Drapeau Pays 4" class="flag">
+				</div>
+			</div>	
+			<div class="parcours-content">
+				<div class="experiences">
+					<h3>Expériences Professionnelles</h3>
+					<ul>
+						<h5>Expérience chez ADP France (2023 - 2025) - Développeur BI et Data Scientist</h5>
+						<p>Actuellement en apprentissage chez ADP France, je me spécialise dans le développement de solutions de Business Intelligence et l'analyse de données. Chaque semaine alternée, je collabore étroitement avec l'équipe pour fournir des tableaux de bord personnalisés demandés par les gestionnaires, facilitant ainsi l'analyse des données relatives à nos clients. J'utilise des logiciels tels que Power BI, Excel, et les bases de données Oracle, afin de soutenir la prise de décision et l'amélioration continue des processus internes de l'entreprise. </p> <br>     
+						<h5>Centre des Finances Publiques, Créteil (Juillet 2022) - Agent Polyvalent</h5>
+						<p>Mon premier emploi professionnel m'a permis de développer ma ponctualité et mon attention aux détails. J'étais chargé de traiter les chèques et d'effectuer des saisies informatiques, assurant la fiabilité et la précision des données financières traitées. Cette expérience a renforcé ma compréhension des processus administratifs et mon aptitude à travailler sous pression, tout en maintenant une haute qualité de travail. </p>  
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section id="projects">
+		<div class="projets-container">
+			<div class="projets-universitaires">
+				<h3>Projets Universitaires</h3>
+				<div class="projet-universitaire">
+					<a href="Image/SAE_PetrolCoke_MOUTTAPA_SOUMAHORO.pdf" target="_blank" class="projet-option">
+						<img src="Image/SAE_PetrolCoke.png" alt="Projet Universitaire 1">
+					</a>
+					<ul>
+						<h5>Projet d'Analyse de la Production d'Électricité à partir du Petrol Coke</h5> <br> <br>
+						<p> Objectif : Étudier les tendances d'utilisation du Petrol Coke comme source d'énergie aux États-Unis de 2001 à 2022 pour guider les décisions en matière de politique énergétique. (Travail de groupe à 2)<br> <br>
+							Méthodologies et outils utilisés :<br> 
+							Statistiques : Moyennes mobiles, régression, et décomposition saisonnière.<br> 
+							Logiciel : R avec les packages ggplot2 pour la visualisation et forecast pour les prédictions.<br> <br>
+							Résultats :<br> 
+							Identification d'une tendance à la baisse de l'utilisation du Petrol Coke.<br> 
+							Prévision de la production d'électricité pour 2023 en utilisant des méthodes comme ARIMA, qui a montré une précision prédictive supérieure.<br> <br>
+							Impact : Les résultats fournissent des insights pour des alternatives énergétiques plus durables et influencent les pratiques de durabilité.</p>
+					</ul>
+				</div>
+				<div class="projet-universitaire">
+					<a href="Image/Rapport_MOUTTAPA_SOUMAHORO.pdf" target="_blank" class="projet-option">
+						<img src="Image/SAE_CDD.png" alt="Projet Universitaire 2">
+					</a>
+					<ul>
+						<h5>Projet de Complément de la Base de Données SIRENE</h5> <br> <br>
+						<p> Objectif : Enrichir la base de données SIRENE avec des coordonnées géographiques et des détails supplémentaires sur les établissements à partir de Google Maps. (Travail de groupe à 2)<br> <br>
+							Méthodologies et outils utilisés :<br> 
+							Préparation des données : Utilisation de Python et pandas pour importer, nettoyer, et transformer les données du fichier StockEtablissement.<br> 
+							Collecte de données géographiques : Utilisation des API pour obtenir des coordonnées géographiques et intégration dans le DataFrame.<br> 
+							Extraction d'informations via Google Maps : Emploi de Selenium et Chromedriver pour naviguer sur Google Maps et extraire des détails complémentaires. <br> <br>
+							Résultat : Malgré les défis techniques, le projet a permis d'enrichir significativement la base de données SIRENE, ajoutant des coordonnées géographiques et des informations web aux entrées existantes.</p>
+					</ul>
+				</div>
+			</div>
+			<div class="projets-professionnels">
+				<h3>Projets Professionnels</h3>
+				<div class="projet-professionnel">
+					<img src="Image/NPS.png" alt="Projet Professionnel 1">
+					<ul>
+						<h5>Projet de Création d'un Dashboard Power BI chez ADP France</h5> <br> <br>
+						<p> Période : Octobre 2023 à janvier 2024 <br> <br>
+							Objectif : Créer et améliorer un dashboard Power BI pour analyser le score NPS Relationnel d'ADP, basé sur les réponses des clients à un questionnaire mensuel. (Travail en autonomie)<br> <br>
+							Défis et solutions :<br> 
+							Techniques : Création de dataflows, gestion de bases de données, et réalisation de calculs complexes.<br> 
+							Visuels : Adaptation du dashboard pour la dynamique des utilisateurs, y compris l'accessibilité pour les personnes daltoniennes.<br> <br>
+							Compétences développées :<br>
+							Soft Skills : Communication efficace pour rapporter les progrès et les problématiques.<br>
+							Hard Skills : Maîtrise de Power BI, Power Query Editor, DAX, M Language, et compétences statistiques.<br> <br>
+							Conclusion : Ce projet a amélioré ma capacité à travailler de manière autonome et à résoudre des problèmes techniques complexes, tout en développant ma compréhension des besoins des utilisateurs finaux et mes compétences en visualisation de données.
+					</ul>				
+				</div>
+			</div>
+		</div>
+		<div class="projets-grand-titre">
+			<div class="projet-header">
+				<h2>Projets</h2>
+				<div class="projet-logo-container">
+					<img src="Image/projets-logo.png" alt="Logo Projets" class="projets-logo">
+				</div>
+			</div>
+		</div>
+	</section>
+	<section id="contact">
+		<div class="contact-title">
+			<div class="contact-header">
+				<h2>Contact</h2>
+				<div class="contact-logo-container">
+					<img src="Image/contactlogo.png" alt="Logo Contact" class="contact-logo">
+				</div>
+			</div>
+		</div>
+		<div class="contact-options">
+			<a href="mailto:mouttapa.aymeric@gmail.com" class="contact-option">
+				<img src="Image/gmail-logo.png" alt="Gmail Logo">
+			</a>
+			<a href="https://www.linkedin.com/in/aymeric-mouttapa-974741269/" target="_blank" class="contact-option">
+				<img src="Image/linkedin-logo.webp" alt="LinkedIn Logo">
+			</a>
+			<a href="Image/CV.pdf" target="_blank" class="contact-option">
+				<img src="Image/cv-logo.png" alt="CV Logo">
+			</a>
+		</div>
+	</section>
+</body>
+</html>
