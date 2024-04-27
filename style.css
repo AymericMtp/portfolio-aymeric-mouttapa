@@ -98,7 +98,7 @@ main {
 .blue-stripe {
 	position: absolute;
 	z-index: 0;
-    background-color: #004AAD;
+    background-color: #3089c4;
     width: 100px;
     height: 350px;
     left: -170px;
@@ -183,7 +183,7 @@ main {
 }
 
 .about-left {
-    background-color: #004AAD;
+    background-color: #3089c4;
     color: white;
     margin-left: -20px;
     padding: 20px;
@@ -247,7 +247,7 @@ main {
 }
 
 .tabs {
-    background-color: #333; /* Gris clair pour le fond des boutons */
+    background-color: #44a8eb; /* Gris clair pour le fond des boutons */
     padding: 10px; /* Ajoute un peu d'espace autour des boutons à l'intérieur du conteneur */
     display: flex; /* Assure que les boutons sont alignés horizontalement */
     flex-direction: row; /* Alignement horizontal des boutons */
@@ -409,7 +409,7 @@ button.next {
 
 
 .competences-grand-titre {
-    background-color: #004AAD; /* Fond gris foncé */
+    background-color: #3089c4; /* Fond gris foncé */
     color: white;
 	margin-top: -65px;
     margin-left: auto; /* Pour coller à la gauche de la page si nécessaire */
@@ -475,7 +475,7 @@ button.next {
 
 
 .parcours-left {
-    background-color: #004AAD;
+    background-color: #3089c4;
     color: white;
     margin-left: -20px; /* Si nécessaire pour aligner comme dans 'À Propos' */
     padding: 20px;
@@ -691,7 +691,7 @@ button.next {
 
 /* Grand titre sous les projets */
 .projets-grand-titre {
-    background-color: #004AAD; /* Fond gris foncé */
+    background-color: #3089c4; /* Fond gris foncé */
     color: white;
 	margin-top: -270px;
     margin-left: auto; /* Pour coller à la gauche de la page si nécessaire */
@@ -744,7 +744,7 @@ button.next {
 
 
 .contact-title {
-    background-color: #004AAD;
+    background-color: #3089c4;
     color: white;
     width: 700px;
 	height: 200px;/* Ajuster en fonction de la largeur de votre conteneur */
