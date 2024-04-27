@@ -672,9 +672,39 @@ button.next {
 	margin-right: 0px;
 }
 
+.projet-option {
+    position: relative;
+    display: inline-block; /* Assure une bonne position et dimensionnement */
+}
+
 .projet-option:hover img {
     transform: scale(1.1); /* Agrandit légèrement le logo au survol */
+    transition: transform 0.3s ease; /* Animation fluide */
 }
+
+.projet-option::after {
+    content: "Cliquer pour voir le projet";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7); /* Fond sombre semi-transparent */
+    color: white; /* Texte blanc */
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    text-align: center;
+    padding: 10px; /* Espacement interne */
+}
+
+.projet-option:hover::after {
+    opacity: 1; /* Affiche le texte au survol */
+}
+
 
 .projet-universitaire ul p,
 .projet-professionnel ul p {
