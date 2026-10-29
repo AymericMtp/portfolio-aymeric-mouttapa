@@ -1,368 +1,188 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" data-theme="dark">
 <head>
-    <meta charset="UTF-8">
-    <title>Aymeric Mouttapa - Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Aymeric Mouttapa — Data Analyst & co-fondateur de Hemi</title>
+<meta name="description" content="Aymeric Mouttapa : Data Analyst en alternance chez BNP Paribas Cardif, co-fondateur de Hemi et étudiant en MSc Data/IA à Albert School × Mines Paris – PSL. Power BI, Python, SQL, React Native.">
+<meta name="author" content="Aymeric Mouttapa">
+<meta name="theme-color" content="#0A0B0E">
+<link rel="canonical" href="https://aymericmtp.github.io/portfolio-aymeric-mouttapa/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://aymericmtp.github.io/portfolio-aymeric-mouttapa/">
+<meta property="og:title" content="Aymeric Mouttapa — Data Analyst & co-fondateur de Hemi">
+<meta property="og:description" content="Data Analyst chez BNP Paribas Cardif, co-fondateur de Hemi, MSc Data/IA à Albert School × Mines Paris – PSL.">
+<meta property="og:image" content="https://aymericmtp.github.io/portfolio-aymeric-mouttapa/assets/img/og-card.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<script>
+  /* Avant le premier rendu : thème et langue, pour éviter tout flash. */
+  (function () {
+    var d = document.documentElement, store = null;
+    d.className += ' js';
+    try { store = window.localStorage; } catch (e) {}
+    function get(k) { try { return store && store.getItem(k); } catch (e) { return null; } }
+    var theme = get('am_theme');
+    if (theme !== 'light' && theme !== 'dark') {
+      theme = window.matchMedia && matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+    }
+    d.setAttribute('data-theme', theme);
+    var lang = null;
+    try { lang = new URLSearchParams(location.search).get('lang'); } catch (e) {}
+    if (lang !== 'fr' && lang !== 'en') lang = get('am_lang');
+    if (lang !== 'fr' && lang !== 'en') lang = /^fr/i.test(navigator.language || '') ? 'fr' : 'en';
+    d.lang = lang;
+  })();
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Geist:wght@400..600&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap">
+<link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-    <header>
-		<a href="#home">
-			<img src="Image/logo-am.avif" alt="Logo AM" id="logo-am">
-		</a>
-        <nav>
-            <ul>
-                <li><a href="#home">Accueil</a></li>
-                <li><a href="#about">À Propos</a></li>
-                <li><a href="#competences">Compétences</a></li>
-                <li><a href="#parcours">Parcours</a></li>
-                <li><a href="#projects">Projets</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-        <div id="cv-translate-container">
-			<a href="Image/CV.pdf" target="_blank" class="cv-translate-container">
-				<img src="Image/cv-logo.png" alt="Logo CV" id="cv-logo">
-			</a>
-            <span>CV</span>
-        </div>
-    </header>
-    <main id="home">
-        <div class="left-section">
-            <!-- Contenu de la section gauche (30%) -->
-        </div>
-        <div class="right-section">
-            <span class="blue-stripe"></span>
-            <div class="title-bar">
-                <h1>Aymeric Mouttapa</h1>
-                <p>Portfolio - Science des Données</p>
-            </div>
-            <img src="Image/image.jpg" alt="Image Accueil" class="home-image">
-			<a href="#about" class="start-button-link">
-				<button class="start-button">Commencer <span class="arrow">→</span></button>
-			</a>
-        </div>
-    </main>
-    <section id="about">
-        <div class="about-left">
-			<div class="about-header">
-				<h2>À Propos </h2> 
-				<div class= "about-logo-container">
-					<img src="Image/aboutlogo.jpg" alt="Logo À Propos" class="about-logo">
-				</div>
-			</div>
-		</div>
-        <div class="about-right">
-			<div class="profile-and-tabs">
-				<img src="Image/profile.jpg" alt="Photo de profil" class="profile-pic">
-				<div class="tabs">
-					<input type="radio" id="tab1" name="tab-control" checked hidden />
-					<label for="tab1" class="tab-button">Présentation</label>
-					<input type="radio" id="tab2" name="tab-control" hidden />
-					<label for="tab2" class="tab-button">Soft Skills</label>
-					<input type="radio" id="tab3" name="tab-control" hidden />
-					<label for="tab3" class="tab-button">Passions</label>
-				</div>
-			</div>
-			<div class="tab-content-area">
-				<div class="tab-content" id="content1">
-					<p>Préparant un Bachelor Universitaire de Technologie de Science des Données en alternance, je m’épanouis actuellement dans ce domaine en expansion. Curieux et ambitieux, je cherche à maitriser ce domaine et continuer à m’instruire sur les différents outils et enrichir mes connaissances. <br> <br>
-						Etant apprenti Développeur BI & Data Scientist chez ADP France, je développe actuellement mes connaissances en Data Visualisation et Reporting avec PowerBI.<br> <br>
-						Le mélange du théorique et du pratique me permet d’acquérir de l’expérience et de continuer à apprendre de diverses notions.<br> <br>
-						Ayant vécu à l’étranger pendant une bonne fraction de ma vie, j’aimerai continuer à m’ouvrir l’esprit en effectuant mon master hors de la France</p>
-				</div>
-				<div class="tab-content" id="content2">
-					<p>Adaptabilité Culturelle : Expériences de vie prolongées à Los Angeles, Abu Dhabi et Berlin, développant une capacité exceptionnelle à naviguer et à s'adapter à divers environnements culturels. <br> <br>
-						Sérieux et Rigoureux : Engagement profond dans chaque projet, que ce soit académique ou professionnel, avec une attention méticuleuse aux détails et un respect strict des délais. <br> <br>
-						Curiosité Intellectuelle : Passion pour l'apprentissage continu, notamment dans les domaines de l'analyse de données et des technologies émergentes, permettant une compréhension rapide et une application de nouvelles compétences et concepts. <br> <br>
-						Compétences Multilingues : Maîtrise du français, de l'anglais, et compétences en allemand et en espagnol, facilitant la communication et la collaboration avec des équipes internationales. <br> <br>
-						Créativité et Résolution de Problèmes : Aptitude à penser de manière innovante pour résoudre des problèmes complexes, combinant créativité analytique et approche logique pour des solutions efficaces et pratiques.</p>
-				</div>
-				<div class="tab-content" id="content3">
-					<p>Voyages : Expérience enrichissante de vie et de travail dans plusieurs pays, reflétant un intérêt profond pour l'exploration de nouvelles cultures et la compréhension des diversités mondiales. <br> <br>
-						Musculation : Discipline sportive pratiquée régulièrement, illustrant un engagement envers le bien-être personnel et la résilience physique. <br> <br>
-						Jeux Vidéo : Intérêt pour le gaming, non seulement comme loisir mais aussi pour son aspect compétitif et stratégique, favorisant les réflexes et la prise de décision rapide. <br> <br>
-						Musique et Mode : Attractions culturelles qui montrent un sens de la créativité et de l'expression personnelle, soulignant une appréciation pour l'art sous diverses formes.</p>
-				</div>
-			</div>
-		</div>
-    </section>
-	<script>
-	document.addEventListener('DOMContentLoaded', () => {
-		const tabs = document.querySelectorAll('.tab-button');
-		const contents = document.querySelectorAll('.tab-content');
+<a class="skip" href="#profil" data-i18n="ui.skip">Aller au contenu</a>
+<div class="progress" aria-hidden="true"><span></span></div>
 
-		// Masquer tous les contenus sauf le premier
-		contents.forEach((content, index) => {
-			if (index !== 0) {
-				content.style.display = 'none';
-			}
-		});
+<header class="nav" data-nav>
+  <div class="nav__inner">
+    <a class="logo" href="#accueil" aria-label="Aymeric Mouttapa">
+      <span class="logo__mark">am</span><span class="logo__dot"></span>
+    </a>
+    <nav class="nav__links" aria-label="Sections">
+      <span class="nav__pill" aria-hidden="true"></span>
+      <a href="#profil" data-i18n="ui.nav.profil">Profil</a>
+      <a href="#parcours" data-i18n="ui.nav.parcours">Parcours</a>
+      <a href="#projets" data-i18n="ui.nav.projets">Projets</a>
+      <a href="#stack" data-i18n="ui.nav.stack">Stack</a>
+      <a href="#monde" data-i18n="ui.nav.monde">Monde</a>
+      <a href="#contact" data-i18n="ui.nav.contact">Contact</a>
+    </nav>
+    <div class="nav__tools">
+      <button class="icon-btn" type="button" data-action="console" data-i18n-aria="ui.console">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 7l5 5-5 5M12.5 17H19"/></svg>
+      </button>
+      <button class="lang-btn" type="button" data-action="lang" data-i18n-aria="ui.lang">
+        <span data-l="fr">FR</span><span data-l="en">EN</span>
+      </button>
+      <button class="icon-btn" type="button" data-action="theme" data-i18n-aria="ui.theme">
+        <svg class="i-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2M12 19.5v2M4.6 4.6l1.4 1.4M18 18l1.4 1.4M2.5 12h2M19.5 12h2M4.6 19.4L6 18M18 6l1.4-1.4"/></svg>
+        <svg class="i-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg>
+      </button>
+      <button class="icon-btn burger" type="button" data-action="menu" aria-expanded="false" aria-controls="menu" data-i18n-aria="ui.menu">
+        <span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
 
-		tabs.forEach((tab, index) => {
-			tab.addEventListener('click', () => {
-				contents.forEach(content => {
-					content.style.display = 'none';
-				});
-				contents[index].style.display = 'block';
-			});
-		});
-	});
-	</script>
-    <section id="competences">
-        <div class="competences-left">
-            <div class="competences-titre">
-                <h3>Compétences</h3>
-            </div>
-            <div class="competences-texte">
-                <h4>Programmation :</h4>
-                <p>Python, SQL, HTML/CSS.</p> <br> <br>
-                <h4>Statistiques et Analyse de Données :</h4>
-                <p>R, Statistiques Descriptives et Inférentielles, Probabilités.</p> <br> <br>
-                <h4>Business Intelligence et Rapports :</h4>
-                <p>Power BI, Excel, Tableau.</p> <br> <br>
-				<h4>Gestion de Projet et Méthodologies :</h4>
-                <p>Gestion de Projets, Connaissances en Economie et en Droit. </p> <br> <br>
-            </div>
-        </div>
-        <div class="competences-right">
-            <div class="certifications-titre">
-                <h3>Certifications</h3>
-            </div>
-            <div class="certifications">
-                <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
-                <div class="certification">
-                    <img src="Image/IELTS_Results.png" alt="Certification 1" style="width:100%">
-                    <div class="description">IELTS Results</div>
-                </div>
-                <div class="certification" style="display:none;">
-                    <img src="Image/certif-powerbi.jpg" alt="Certification 2" style="width:100%">
-                    <div class="description">Udemy - PowerBI Certification</div>
-                </div>
-		<div class="certification" style="display:none;">
-                    <img src="Image/certif-celonis.jpg" alt="Certification 3" style="width:100%">
-                    <div class="description">Udemy - Celonis Certification</div>
-                </div>
-                <button class="next" onclick="changeSlide(1)">&#10095;</button>
-            </div>
-		</div>
-        <div class="competences-grand-titre">
-			<div class="competences-header">
-				<h2>Compétences</h2>
-				<div class= "competences-logo-container">
-					 <img src="Image/competenceslogo.png" alt="Logo Compétences" class="competences-logo">
-				</div>
-			</div>
-        </div>
-    </section>
-    <script>
-        var slideIndex = 1;
-        showSlides(slideIndex);
+<div class="menu" id="menu" data-menu>
+  <nav class="menu__links" aria-label="Menu">
+    <a href="#profil"><i>01</i><span data-i18n="ui.nav.profil">Profil</span></a>
+    <a href="#parcours"><i>02</i><span data-i18n="ui.nav.parcours">Parcours</span></a>
+    <a href="#projets"><i>03</i><span data-i18n="ui.nav.projets">Projets</span></a>
+    <a href="#stack"><i>04</i><span data-i18n="ui.nav.stack">Stack</span></a>
+    <a href="#monde"><i>05</i><span data-i18n="ui.nav.monde">Monde</span></a>
+    <a href="#contact"><i>06</i><span data-i18n="ui.nav.contact">Contact</span></a>
+  </nav>
+  <p class="menu__foot mono">mouttapa.aymeric@gmail.com</p>
+</div>
 
-        function changeSlide(n) {
-            showSlides(slideIndex += n);
-        }
+<main>
+  <section class="hero" id="accueil">
+    <div class="hero__grid" aria-hidden="true"></div>
+    <canvas class="hero__canvas" aria-hidden="true"></canvas>
+    <div class="container hero__inner">
+      <div class="hero__query mono" aria-hidden="true" data-enter="1">
+        <p><span class="hero__prompt">&gt;</span> <span data-typed></span><span class="caret"></span></p>
+        <p class="hero__result"><span class="hero__ok">✓</span> <span data-i18n="hero.result"></span></p>
+      </div>
+      <h1 class="hero__name" data-hero-name aria-label="Aymeric Mouttapa">
+        <span class="hero__line">Aymeric</span>
+        <span class="hero__line">Mouttapa</span>
+      </h1>
+      <p class="hero__role" data-enter="2"><span class="pulse" aria-hidden="true"></span><span class="hero__roles" data-roles></span></p>
+      <p class="hero__tagline" data-i18n="hero.tagline" data-enter="3"></p>
+      <div class="hero__cta" data-enter="4">
+        <a class="btn btn--primary" data-magnetic data-cv href="assets/docs/CV_MOUTTAPA_AYMERIC.pdf" target="_blank" rel="noopener">
+          <span data-i18n="ui.cv">Télécharger le CV</span>
+          <svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6"/></svg>
+        </a>
+        <a class="btn btn--ghost" data-magnetic href="#contact">
+          <span data-i18n="ui.contactMe">Me contacter</span>
+          <svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="container hero__meta mono" data-enter="4">
+      <span><span class="dot" aria-hidden="true"></span>Paris, France</span>
+      <span class="hero__langs">FR · EN · DE</span>
+      <a class="hero__scroll" href="#profil"><span data-i18n="ui.scroll">Défiler</span><i aria-hidden="true"></i></a>
+    </div>
+  </section>
 
-        function showSlides(n) {
-            var i;
-            var slides = document.getElementsByClassName("certification");
-            if (n > slides.length) { slideIndex = 1; }
-            if (n < 1) { slideIndex = slides.length; }
-            for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-            }
-            slides[slideIndex - 1].style.display = "block";
-        }
-    </script>
-	<section id="parcours">
-		<div class="parcours-flex-container">
-			<div class="parcours-container">
-				<div class="parcours-left">
-					<div class="parcours-header">
-						<h2>Parcours</h2>
-						<div class="parcours-logo-container">
-							<img src="Image/parcourslogo.jpg" alt="Logo Parcours" class="parcours-logo">
-						</div>
-					</div>
-				</div>
-				<!-- Timeline Container -->
-				<div class="timeline-container">
-					<div class="timeline-block">
-						<div class="timeline-dot"></div>
-						<div class="timeline-content">
-							<a href="https://iutparis-seine.u-paris.fr/metiers-de-la-data/bachelor-universitaire-de-technologie-stid/"> <h3>BUT Science des Données</h3> </a>
-							<span>2022 - 2025</span>
-							<p>Université Paris Cité - IUT Paris Rives de Seine - Paris 16, France</p>
-						</div>
-					</div>
-					<div class="timeline-block">
-						<div class="timeline-dot"></div>
-						<div class="timeline-content">
-							<h3>Baccalauréat Général - Mathématiques & SES</h3>
-							<span>2019 - 2022</span>
-							<p>Lycée d'Arsonval - Saint-Maur-des-Fossés, France</p>
-						</div>
-					</div>
-				</div>
-				<div class="countries">
-					<h3>Pays vécus</h3>
-					<img src="Image/flag1.png" alt="Drapeau Pays 1" class="flag">
-					<img src="Image/flag2.png" alt="Drapeau Pays 2" class="flag">
-					<img src="Image/flag3.png" alt="Drapeau Pays 3" class="flag">
-					<img src="Image/flag4.png" alt="Drapeau Pays 4" class="flag">
-				</div>
-			</div>	
-			<div class="parcours-content">
-				<div class="experiences">
-					<h3>Expériences Professionnelles</h3>
-					<ul>
-						<h5>Expérience chez ADP France (2023 - 2025) - Développeur BI et Data Scientist</h5>
-						<p>Actuellement en apprentissage chez ADP France, je me spécialise dans le développement de solutions de Business Intelligence et l'analyse de données. Chaque semaine alternée, je collabore étroitement avec l'équipe pour fournir des tableaux de bord personnalisés demandés par les gestionnaires, facilitant ainsi l'analyse des données relatives à nos clients. J'utilise des logiciels tels que Power BI, Excel, et les bases de données Oracle, afin de soutenir la prise de décision et l'amélioration continue des processus internes de l'entreprise. </p> <br>     
-						<h5>Centre des Finances Publiques, Créteil (Juillet 2022) - Agent Polyvalent</h5>
-						<p>Mon premier emploi professionnel m'a permis de développer ma ponctualité et mon attention aux détails. J'étais chargé de traiter les chèques et d'effectuer des saisies informatiques, assurant la fiabilité et la précision des données financières traitées. Cette expérience a renforcé ma compréhension des processus administratifs et mon aptitude à travailler sous pression, tout en maintenant une haute qualité de travail. </p>  
-					</ul>
-				</div>
-			</div>
-		</div>
-	</section>
-	<section id="projects">
-		<div class="projets-container">
-			<div class="projets-universitaires">
-				<h3>Projets Universitaires</h3>
-				<div class="projet-universitaire">
-					<a href="Image/SAE_PetrolCoke_MOUTTAPA_SOUMAHORO.pdf" target="_blank" class="projet-option">
-						<img src="Image/SAE_PetrolCoke.png" alt="Projet Universitaire 1">
-					</a>
-					<ul>
-						<h5>Projet d'Analyse de la Production d'Électricité à partir du Petrol Coke</h5>
-						<br> <br>
-						<p> Objectif : Étudier les tendances d'utilisation du Petrol Coke comme source d'énergie aux États-Unis de 2001 à 2022 pour guider les décisions en matière de politique énergétique. (Travail de groupe à 2)<br> <br>
-							Méthodologies et outils utilisés :<br>
-							Statistiques : Moyennes mobiles, régression, et décomposition saisonnière.<br>
-							Logiciel : R avec les packages ggplot2 pour la visualisation et forecast pour les prédictions.<br> <br>
-							Résultats :<br>
-							Identification d'une tendance à la baisse de l'utilisation du Petrol Coke.<br>
-							Prévision de la production d'électricité pour 2023 en utilisant des méthodes comme ARIMA, qui a montré une précision prédictive supérieure.<br> <br>
-							Impact : Les résultats fournissent des insights pour des alternatives énergétiques plus durables et influencent les pratiques de durabilité.</p>
-					</ul>
-				</div>
-				<div class="projet-universitaire">
-					<a href="Image/Rapport_MOUTTAPA_SOUMAHORO.pdf" target="_blank" class="projet-option">
-						<img src="Image/SAE_CDD.png" alt="Projet Universitaire 2">
-					</a>
-					<ul>
-						<h5>Projet de Complément de la Base de Données SIRENE</h5>
-						<br> <br>
-						<p> Objectif : Enrichir la base de données SIRENE avec des coordonnées géographiques et des détails supplémentaires sur les établissements à partir de Google Maps. (Travail de groupe à 2)<br> <br>
-							Méthodologies et outils utilisés :<br>
-							Préparation des données : Utilisation de Python et pandas pour importer, nettoyer, et transformer les données du fichier StockEtablissement.<br>
-							Collecte de données géographiques : Utilisation des API pour obtenir des coordonnées géographiques et intégration dans le DataFrame.<br>
-							Extraction d'informations via Google Maps : Emploi de Selenium et Chromedriver pour naviguer sur Google Maps et extraire des détails complémentaires. <br> <br>
-							Résultat : Malgré les défis techniques, le projet a permis d'enrichir significativement la base de données SIRENE, ajoutant des coordonnées géographiques et des informations web aux entrées existantes.</p>
-					</ul>
-				</div>
-				<div class="projet-universitaire">
-					<a href="Image/Rapport_MOUTTAPA_SOUMAHORO_SID.pdf" target="_blank" class="projet-option">
-						<img src="Image/SAE_SID.png" alt="Projet Universitaire 3">
-					</a>
-					<ul>
-						<h5>Projet Intégration de Données chez NIL</h5>
-						<br> <br>
-						<p> Objectif : Développer un entrepôt de données et une modélisation relationnelle pour analyser le comportement des utilisateurs et les performances des ventes.<br> <br>
-							Défis et solutions :<br>
-							Modélisation : Création de tables pour les interactions clients et les détails des commandes.<br>
-							SQL : Extraction de métriques clés comme le total des ventes. <br>
-							Dashboard : Conception d'un tableau de bord pour visualiser les données de vente. <br> <br>
-							Compétences développées : <br>
-							Techniques : Maîtrise de SQL et de la modélisation relationnelle.<br>
-							Analytiques : Transformation des exigences commerciales en solutions de données structurées. <br> <br>
-							Impact personnel : Renforcement des compétences en gestion et visualisation de données pour l'analyse décisionnelle. </p>
-					</ul>
-				</div>
-				<div class="projet-universitaire">
-					<a href="Image/Rapport_Analyse_Données_AZEK_GOMIS_MOUTTAPA.pdf" target="_blank" class="projet-option">
-						<img src="Image/SAE_WorldHappiness.png" alt="Projet Universitaire 4">
-					</a>
-					<ul>
-						<h5>Projet sur l'analyse du bonheur dans le monde</h5>
-						<br> 
-						<p> Objectif : Utiliser les données du World Happiness Report 2022 pour analyser le taux de bonheur mondial et identifier les principaux facteurs de bonheur via RStudio. <br> <br>
-							Méthodologies et outils utilisés :<br>
-							Statistiques : Analyse de variables clés telles que le PIB par habitant et le soutien social.<br>
-							Approche : Exploration des relations entre variables via visualisations et matrices de corrélations.<br> 
-							Analyse Avancée : Utilisation de la régression linéaire et du calcul de coefficients de Pearson pour lier les caractéristiques des pays à leur niveau de bonheur.<br> <br>
-							Résultats :<br>
-							L'analyse a démontré que le PIB par habitant et le soutien social sont les principaux déterminants du bonheur, tandis que la perception de la corruption et la générosité impactent moins. Des corrélations significatives entre les variables de bien-être et les scores de bonheur ont également été identifiées.<br> <br>
-							Impact : Ce projet éclaire sur les facteurs influençant le bonheur global, offrant une base pour des recommandations politiques visant à améliorer le bien-être mondial.</p>
-					</ul>
-				</div>
-				<div class="projet-universitaire">
-					<a href="https://aymeric-mouttapa.shinyapps.io/fifa19_dashboard/" target="_blank" class="projet-option">
-						<img src="Image/SAE_FIFA.jpeg" alt="Projet Universitaire 5">
-					</a>
-					<ul>
-						<h5>Projet Dashboard R Shiny sur FIFA 19</h5>
-						<br> <br>
-						<p> Objectif : Créer une application interactive pour analyser et comparer les performances des joueurs de FIFA 19 à travers différentes ligues.<br> <br>
-							Méthodologies et outils utilisés :<br>
-							Statistiques :  Application de méthodes de tri, de filtrage et de visualisation pour examiner les performances des joueurs. <br>
-							Logiciel : Utilisation de Shiny et Shinydashboard pour l'interface utilisateur, DT pour les tables interactives, Plotly pour les graphiques, et dplyr pour la manipulation de données. <br> <br>
-							Résultats :<br>
-							Développement d'un tableau de bord interactif offrant des visualisations telles que des tableaux de classement, des cartes géographiques et des graphiques radar des compétences des joueurs.<br> <br>
-							Impact : Amélioration de l'analyse des performances des joueurs, optimisant les stratégies de jeu. Utilisation éducative pour les étudiants et passionnés de données et de jeux vidéo.</p>
-					</ul>
-				</div>
-			</div>
-			<div class="projets-professionnels">
-				<h3>Projets Professionnels</h3>
-				<div class="projet-professionnel">
-					<img src="Image/NPS.png" alt="Projet Professionnel 1">
-					<ul>
-						<h5>Projet de Création d'un Dashboard Power BI chez ADP France</h5>
-						<br> <br>
-						<p> Période : Octobre 2023 à janvier 2024 <br> <br>
-							Objectif : Créer et améliorer un dashboard Power BI pour analyser le score NPS Relationnel d'ADP, basé sur les réponses des clients à un questionnaire mensuel. (Travail en autonomie)<br> <br>
-							Défis et solutions :<br>
-							Techniques : Création de dataflows, gestion de bases de données, et réalisation de calculs complexes.<br>
-							Visuels : Adaptation du dashboard pour la dynamique des utilisateurs, y compris l'accessibilité pour les personnes daltoniennes.<br> <br>
-							Compétences développées :<br>
-							Soft Skills : Communication efficace pour rapporter les progrès et les problématiques.<br>
-							Hard Skills : Maîtrise de Power BI, Power Query Editor, DAX, M Language, et compétences statistiques.<br> <br>
-							Conclusion : Ce projet a amélioré ma capacité à travailler de manière autonome et à résoudre des problèmes techniques complexes, tout en développant ma compréhension des besoins des utilisateurs finaux et mes compétences en visualisation de données.
-					</ul>
-				</div>
-			</div>
-		</div>
-		<div class="projets-grand-titre">
-			<div class="projet-header">
-				<h2>Projets</h2>
-				<div class="projet-logo-container">
-					<img src="Image/projets-logo.png" alt="Logo Projets" class="projets-logo">
-				</div>
-			</div>
-		</div>
-	</section>
+  <section class="section" id="profil" data-render="about"></section>
+  <section class="section" id="parcours" data-render="journey"></section>
+  <section class="section" id="projets" data-render="projects"></section>
+  <section class="section" id="stack" data-render="skills"></section>
+  <section class="section section--world" id="monde" data-render="world"></section>
+  <section class="section section--contact" id="contact" data-render="contact"></section>
+</main>
 
-	<section id="contact">
-		<div class="contact-title">
-			<div class="contact-header">
-				<h2>Contact</h2>
-				<div class="contact-logo-container">
-					<img src="Image/contactlogo.png" alt="Logo Contact" class="contact-logo">
-				</div>
-			</div>
-		</div>
-		<div class="contact-options">
-			<a href="mailto:mouttapa.aymeric@gmail.com" class="contact-option">
-				<img src="Image/gmail-logo.png" alt="Gmail Logo">
-			</a>
-			<a href="https://www.linkedin.com/in/aymeric-mouttapa-974741269/" target="_blank" class="contact-option">
-				<img src="Image/linkedin-logo.webp" alt="LinkedIn Logo">
-			</a>
-			<a href="Image/CV.pdf" target="_blank" class="contact-option">
-				<img src="Image/cv-logo.png" alt="CV Logo">
-			</a>
-		</div>
-	</section>
+<footer class="footer" data-render="footer"></footer>
+
+<noscript>
+  <div class="noscript container">
+    <p>Aymeric Mouttapa — Data Analyst (BNP Paribas Cardif) · Co-fondateur de Hemi · MSc Data/IA, Albert School × Mines Paris – PSL.</p>
+    <p><a href="assets/docs/CV_MOUTTAPA_AYMERIC.pdf">CV (PDF)</a> · <a href="mailto:mouttapa.aymeric@gmail.com">mouttapa.aymeric@gmail.com</a> · <a href="https://www.linkedin.com/in/aymeric-mouttapa-974741269/">LinkedIn</a></p>
+  </div>
+</noscript>
+
+<!-- La console SQL (œuf de Pâques) -->
+<div class="console" data-console hidden role="dialog" aria-modal="true" aria-labelledby="console-title">
+  <div class="console__backdrop" data-action="console-close"></div>
+  <div class="console__window">
+    <div class="console__bar">
+      <span class="console__lights" aria-hidden="true"><i></i><i></i><i></i></span>
+      <span class="console__title mono" id="console-title">aymeric.db — sql</span>
+      <button class="icon-btn" type="button" data-action="console-close" data-i18n-aria="ui.close">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </div>
+    <div class="console__chips" data-console-chips></div>
+    <div class="console__out mono" data-console-out data-lenis-prevent></div>
+    <form class="console__form mono" data-console-form>
+      <label class="console__prompt" for="console-input">sql&gt;</label>
+      <input class="console__input" id="console-input" data-console-input autocomplete="off" autocapitalize="off" spellcheck="false">
+    </form>
+  </div>
+</div>
+
+<div class="lightbox" data-lightbox hidden role="dialog" aria-modal="true">
+  <div class="lightbox__backdrop" data-action="lightbox-close"></div>
+  <figure class="lightbox__figure">
+    <img alt="" data-lightbox-img>
+    <figcaption class="mono" data-lightbox-cap></figcaption>
+  </figure>
+  <button class="icon-btn lightbox__close" type="button" data-action="lightbox-close" data-i18n-aria="ui.close">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+  </button>
+</div>
+
+<div class="preview" data-preview aria-hidden="true"><img alt=""></div>
+<div class="tooltip mono" data-tooltip role="tooltip" hidden></div>
+<div class="toast" data-toast role="status" aria-live="polite"></div>
+
+<script src="assets/js/vendor/gsap.min.js" defer></script>
+<script src="assets/js/vendor/ScrollTrigger.min.js" defer></script>
+<script src="assets/js/vendor/lenis.min.js" defer></script>
+<script src="assets/js/content.js" defer></script>
+<script src="assets/js/world-dots.js" defer></script>
+<script src="assets/js/hero.js" defer></script>
+<script src="assets/js/world.js" defer></script>
+<script src="assets/js/console.js" defer></script>
+<script src="assets/js/main.js" defer></script>
 </body>
 </html>
